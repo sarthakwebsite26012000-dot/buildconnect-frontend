@@ -1,48 +1,47 @@
-'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { API_BASE_URL } from '../../lib/apiConfig';
 
 export default function LoginPage() {
-  const router = useRouter()
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+  const router = useRouter();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
-    e.preventDefault()
-    setError('')
-    setLoading(true)
+    e.preventDefault();
+    setError('');
+    setLoading(true);
 
     try {
-      // In production, call your backend API
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
-        credentials: 'include' // Important for cookies
-      })
+        credentials: 'include',
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (response.ok) {
-        // Token should be set in cookies by backend
-        // Check if user is admin and redirect to admin dashboard
         if (data.role === 'admin') {
-          router.push('/admin')
+          router.push('/admin');
         } else {
-          router.push('/dashboard')
+          router.push('/dashboard');
         }
       } else {
-        setError(data.message || 'Invalid credentials')
+        setError(data.message || 'Invalid credentials');
       }
     } catch (err) {
-      console.error('Login error:', err)
-      setError('Failed to connect to server')
+      console.error('Login error:', err);
+      setError('Failed to connect to server');
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
@@ -99,11 +98,12 @@ export default function LoginPage() {
         <div className="mt-6 text-center text-gray-600 text-sm">
           <p>Demo credentials:</p>
           <p className="font-mono bg-gray-100 p-2 rounded mt-2">
-            Username: admin<br />
+            Username: admin
+            <br />
             Password: buildconnect2025
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
