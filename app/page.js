@@ -1,3 +1,6 @@
+'use client';
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div>
@@ -10,8 +13,12 @@ export default function Home() {
           </h1>
           <p className="text-xl mb-8">Book verified professionals for all your construction and home needs</p>
           <div className="flex gap-4 justify-center">
-            <button className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg font-semibold text-lg">Download App</button>
-            <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg">Book Now</button>
+<Link href="/download">
+                        <button className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg font-semibold text-lg">Download App</button>
+          </Link>
+<Link href="/booking">
+                        <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg">Book Now</button>
+          </Link>
           </div>
         </div>
       </section>
