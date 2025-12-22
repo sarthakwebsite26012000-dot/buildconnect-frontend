@@ -161,20 +161,35 @@ export default function Home() {
               🏗️ Professional Construction & Home Services
             </p>
 
-            <div className="flex gap-6 justify-center flex-wrap">
-              <Link href="/download">
-                <button className="bg-gradient-to-r from-orange-500 to-orange-600 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:rotate-2 transition-all duration-300"
-                        style={{transformStyle: 'preserve-3d'}}>
-                  Download App
-                </button>
-              </Link>
-              <Link href="/booking">
-                <button className="bg-white/10 backdrop-blur-md border-2 border-white/30 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:-rotate-2 transition-all duration-300"
-                        style={{transformStyle: 'preserve-3d'}}>
-                  Book Now →
-                </button>
-              </Link>
-            </div>
+                    <div className="flex gap-6 justify-center flex-wrap">
+          <Link href="/download">
+            <button
+              className="bg-gradient-to-r from-orange-500 to-orange-600 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:rotate-2 transition-all duration-300"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              Download App
+            </button>
+          </Link>
+
+          <Link href="/booking">
+            <button
+              className="bg-white/10 backdrop-blur-md border-2 border-white/30 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:-rotate-2 transition-all duration-300"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              Book Now →
+            </button>
+          </Link>
+
+          <Link href="/worker/register">
+            <button
+              className="bg-gradient-to-r from-blue-500 to-blue-600 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:rotate-1 transition-all duration-300"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              Register as Worker
+            </button>
+          </Link>
+        </div>
+
           </div>
         </section>
 
