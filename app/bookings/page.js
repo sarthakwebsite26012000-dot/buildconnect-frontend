@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { API_BASE_URL } from '@/lib/apiConfig';
 
 export default function MyBookings() {
   const [bookings, setBookings] = useState([]);
@@ -14,11 +15,10 @@ export default function MyBookings() {
         setLoading(true);
         setError('');
 
-        // TODO: replace this URL with your real backend endpoint for the current user
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL || ''}/api/bookings/my`,
+          `${API_BASE_URL}/api/bookings/my`,
           {
-            credentials: 'include', // if you use cookies/session
+            credentials: 'include',
           }
         );
 
@@ -41,10 +41,8 @@ export default function MyBookings() {
 
   const handlePayNow = async (bookingId) => {
     try {
-      // TODO: integrate with your payment gateway
-      // Example flow: call backend to create payment session, then redirect
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL || ''}/api/payments/create-session`,
+        `${API_BASE_URL}/api/payments/create-session`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -59,7 +57,6 @@ export default function MyBookings() {
 
       const data = await res.json();
 
-      // If backend returns a redirect URL to Razorpay/Stripe/etc.
       if (data.redirectUrl) {
         window.location.href = data.redirectUrl;
       } else {
