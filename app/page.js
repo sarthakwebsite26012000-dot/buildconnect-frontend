@@ -189,6 +189,15 @@ export default function Home() {
             </button>
           </Link>
         </div>
+                
+          <Link href="/bookings">
+            <button
+              className="bg-white/10 backdrop-blur-md border-2 border-white/30 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl transform hover:scale-110 hover:-rotate-1 transition-all duration-300"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              My Bookings
+            </button>
+          </Link>
 
           </div>
         </section>
