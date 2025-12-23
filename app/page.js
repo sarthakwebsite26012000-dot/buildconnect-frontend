@@ -234,6 +234,65 @@ export default function Home() {
           </div>
         </section>
 
+                {/* How to Book Section */}
+      <section className="py-20 px-4 relative z-10 bg-gradient-to-br from-gray-900 to-blue-900">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-bold text-center mb-6">How to Book</h2>
+          <p className="text-center text-blue-200 text-xl mb-16">Follow these simple steps to book your service</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">1</div>
+              <h3 className="text-2xl font-bold mb-3">Login / Sign Up</h3>
+              <p className="text-blue-200">Sign up or log in with your mobile number to start using our services.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">2</div>
+              <h3 className="text-2xl font-bold mb-3">Select Service</h3>
+              <p className="text-blue-200">Choose the required home or construction service from our catalog.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">3</div>
+              <h3 className="text-2xl font-bold mb-3">Enter Address</h3>
+              <p className="text-blue-200">Add the full service address for doorstep service delivery.</p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">4</div>
+              <h3 className="text-2xl font-bold mb-3">Review Order Summary</h3>
+              <p className="text-blue-200">Check selected services and total charges before proceeding.</p>
+            </div>
+
+            {/* Step 5 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">5</div>
+              <h3 className="text-2xl font-bold mb-3">Schedule Booking</h3>
+              <p className="text-blue-200">Select your preferred date and time slot for the service.</p>
+            </div>
+
+            {/* Step 6 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">6</div>
+              <h3 className="text-2xl font-bold mb-3">Make Payment</h3>
+              <p className="text-blue-200">Pay securely using PhonePe, Google Pay, or any other online payment method.</p>
+            </div>
+
+            {/* Step 7 */}
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 transform hover:scale-105 transition-all duration-500">
+              <div className="text-orange-500 text-6xl font-bold mb-4">7</div>
+              <h3 className="text-2xl font-bold mb-3">Order Confirmation</h3>
+              <p className="text-blue-200">Receive confirmation that your booking has been placed successfully.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
         {/* Footer */}
         <footer className="bg-black/50 border-t border-white/10 py-8 mt-20">
           <div className="max-w-7xl mx-auto px-4 text-center">
